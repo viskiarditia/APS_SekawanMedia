@@ -1,7 +1,6 @@
-@Login
-  Feature: Login Website Aplikasi Pemungutan Suara Sekawan Media
-
-  Scenario: Normal Login
+@login
+Feature: login
+  Scenario: Normal Login Website Aplikasi Pemungutan Suara Sekawan Media
     Given user already website APS on login page
     When user Click username field and input "candidat"
     And user Click password field and input "password123"

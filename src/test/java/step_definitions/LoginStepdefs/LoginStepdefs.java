@@ -1,6 +1,5 @@
 package step_definitions.LoginStepdefs;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -29,7 +28,6 @@ public class LoginStepdefs {
 
     @When("^user Click username field and input \"([^\"]*)\"$")
     public void userClickUsernameFieldAndInput(String username) throws InterruptedException {
-        // Write code here that turns the phrase above into concrete actions
         WebElement ClickUsernameField = webDriver.findElement(By.xpath("//input[@id='username']"));
         ClickUsernameField.click();
         Thread.sleep(1000);
@@ -39,7 +37,6 @@ public class LoginStepdefs {
 
     @And("^user Click password field and input \"([^\"]*)\"$")
     public void userClickPasswordFieldAndInput(String password) throws InterruptedException {
-        // Write code here that turns the phrase above into concrete actions
         WebElement ClickPasswordField = webDriver.findElement((By.xpath("//input[@id='password']")));
         ClickPasswordField.click();
         Thread.sleep(1000);

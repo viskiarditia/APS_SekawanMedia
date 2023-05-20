@@ -12,6 +12,7 @@ public class Hooks {
     @Before
     public void openBrowser(){
         ChromeOptions a = new ChromeOptions();
+        a.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
         webDriver= new ChromeDriver(a);
         String URL = "https://aps-rejanglebong.skwn.dev/dev/index.php/login";
@@ -19,7 +20,8 @@ public class Hooks {
         webDriver.manage().window().maximize();
     }
     @After
-    public void closeBrowser(){
+    public void closeBrowser() throws InterruptedException {
+        Thread.sleep(2000);
         webDriver.quit();
     }
 }
