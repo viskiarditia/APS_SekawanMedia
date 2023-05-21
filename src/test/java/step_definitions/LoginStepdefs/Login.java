@@ -10,10 +10,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import step_definitions.Hooks;
 
-public class LoginStepdefs {
+public class Login {
 
     private WebDriver webDriver;
-    public LoginStepdefs(){
+    public Login(){
         super();
         this.webDriver = Hooks.webDriver;
     }
